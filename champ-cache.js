@@ -1,12 +1,12 @@
 (function (root, factory) {
     if (typeof exports === 'object') {
-        module.exports = factory( require('pouchdb'), require('hoax-views'));
+        module.exports = factory( require('pouchdb'), require('champ-views'));
     } else if (typeof define === 'function' && define.amd) {
-        define(['pouchdb', 'hoax-views'],factory);
+        define(['pouchdb', 'champ-views'],factory);
     } else {
-        root.hoax_pouch_cache = factory(root.Pouch, root.hoax_views);
+        root.champ_cache = factory(root.Pouch, root.champ_views);
     }
-}(this, function (Pouch, hoax_views) {
+}(this, function (Pouch, champ_views) {
 
 
 
@@ -18,7 +18,7 @@
 
 
     constructor.prototype.get_cached_songs = function(cb) {
-        this.local_pouch.query(hoax_views.just_file_docs, cb);
+        this.local_pouch.query(champ_views.just_file_docs, cb);
     };
 
     constructor.prototype.remove_cached_song = function(song_id, cb) {
@@ -38,7 +38,7 @@
     constructor.prototype.add_song = function(song_id, cb) {
         if (!song_id) return;
         var options = {
-            filter: 'hoax/just_file_docs',
+            filter: 'champ/just_file_docs',
             query_params: {
                 doc_id: song_id
             }
