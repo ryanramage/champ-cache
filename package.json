@@ -1,0 +1,24 @@
+{
+  "name": "hoax-pouch-cache",
+  "version": "0.0.0",
+  "description": "Cache music in pouchdb for offline playback",
+  "main": "hoax-pouch-cache.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "hoax",
+    "couchdb",
+    "pouchdb"
+  ],
+  "author": "Ryan Ramage",
+  "license": "BSD",
+  "dependencies": {
+    "pouchdb": "0.0.13",
+    "hoax-views": "0.0.0"
+  },
+  "devDependencies": {
+    "async": "~0.2.9"
+  }
+}
